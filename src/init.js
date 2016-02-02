@@ -22,11 +22,11 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
-    var dancer = new dancer(
+    var dancer = new Dancer(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(cancer.$node);
+    $('body').append(dancer.$node);
   });
 });

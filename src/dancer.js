@@ -7,6 +7,8 @@ var Dancer = function(top, left, timeBetweenSteps){
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
   this.timeBetweenSteps = timeBetweenSteps;
+  this.setPosition(this.top, this.left);
+  this.step();
 
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
   // this one sets the position to some random default point within the body
@@ -31,15 +33,12 @@ Dancer.prototype.step = function(){
 
   //console.log(this); //-- this is MakeBlinkyDancer
 
-  var that = this;
 
 //  console.log('insidse Dancer.prototype.step', this) -- this refers to
 //new BlinkyDancer because we are using .call on Dancer.prototype.set in
 //BlinkyDancer.prototype.set and passing in this, which refers to new Blinky //Dancer
 //Jazz--this refers to BlinkyDancer b/c within BlinkyDancer we're binding this //because we are calling Dancer inside of BlinkyDancer
-  setTimeout(function() {
-    this.step();
-      }, that.timeBetweenSteps);
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
 
