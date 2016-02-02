@@ -7,7 +7,7 @@ describe("blinkyDancer", function() {
   beforeEach(function() {
     clock = sinon.useFakeTimers();
 
-    blinkyDancer = new MakeBlinkyDancer(10, 20, timeBetweenSteps);
+    blinkyDancer = new BlinkyDancer(10, 20, timeBetweenSteps);
   });
 
   it("should have a jQuery $node object", function(){
@@ -25,7 +25,7 @@ describe("blinkyDancer", function() {
       sinon.spy(blinkyDancer, "step");
       expect(blinkyDancer.step.callCount).to.be.equal(0);
     //  console.log("blinkyDancer.step.callCount #1", blinkyDancer.step.callCount);
-    blinkyDancer = new MakeBlinkyDancer(10, 20, timeBetweenSteps);
+    blinkyDancer = new BlinkyDancer(10, 20, timeBetweenSteps);
       clock.tick(timeBetweenSteps);
 
     //  console.log("blinkyDancer.step.callCount #2", blinkyDancer.step.callCount);
