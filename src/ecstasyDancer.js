@@ -14,7 +14,9 @@ var EcstasyDancer = function(top, left, timeBetweenSteps){
   Dancer.prototype.step.call(this);
   //make a color changing dancer
   //random hex generator
-  //
-  this.$node.style ('Ecstatic')
+  var randomHexGenerator = function() {
+    return '#' + Math.floor(Math.random()*16777215).toString(16);
+  };
+  this.$node.style
 
   };
