@@ -31,5 +31,5 @@ MakeDancer.prototype.step = function(){
   //console.log(this); //-- this is MakeBlinkyDancer
 
   //var boundFunk = this.step.bind(this);
-  setTimeout(MakeBlinkyDancer.prototype.step, MakeBlinkyDancer.timeBetweenSteps);
+  //setTimeout(MakeBlinkyDancer.prototype.step, MakeBlinkyDancer.timeBetweenSteps);
 };
