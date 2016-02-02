@@ -10,20 +10,20 @@ var Dancer = function(top, left, timeBetweenSteps){
   this.setPosition(this.top, this.left);
   this.step();
 
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body
-  //dancer.setPosition(top, left);
+//console.log('value of this within Dancer Class', this);
+//console.log('value of this.step within Dancer Class', this.step)
 };
 
 Dancer.prototype.setPosition = function(top, left){
-  // Use css top and left properties to position our <span> tag
-  // where it belongs on the page. See http://api.jquery.com/css/
-  //
+
   var styleSettings = {
     top: top,
     left: left
   };
   this.$node.css(styleSettings);
+
+
+  //console.log('the value of this.$node within Dancer.prototype.setPosition', this.$node)
 };
 
 
@@ -31,14 +31,12 @@ Dancer.prototype.step = function(){
   // the basic dancer doen't do anything interesting at all on each step,
   // it just schedules the next step
 
-  //console.log(this); //-- this is MakeBlinkyDancer
+  //console.log('value of this within Dancer.prototype.step', this); //-- this is MakeBlinkyDancer
 
 
-//  console.log('insidse Dancer.prototype.step', this) -- this refers to
-//new BlinkyDancer because we are using .call on Dancer.prototype.set in
-//BlinkyDancer.prototype.set and passing in this, which refers to new Blinky //Dancer
-//Jazz--this refers to BlinkyDancer b/c within BlinkyDancer we're binding this //because we are calling Dancer inside of BlinkyDancer
-  setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  //console.log('value of this.step.bind(this)', this.step.bind(this));
+  //setTimeout(function IDK(){ /*something */ }, this.timeBetweenSteps);
+  setTimeout(this.step.bind(this), this.timeBetweenSteps)
 };
 
 
