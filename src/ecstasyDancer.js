@@ -17,6 +17,7 @@ var EcstasyDancer = function(top, left, timeBetweenSteps){
   var randomHexGenerator = function() {
     return '#' + Math.floor(Math.random()*16777215).toString(16);
   };
-  this.$node.style
+
+  this.$node.css('border-color', randomHexGenerator );
 
   };

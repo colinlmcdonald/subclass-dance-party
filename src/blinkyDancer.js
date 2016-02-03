@@ -1,10 +1,10 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps){
 
-  Dancer.call(this);
+  Dancer.call(this, top, left, timeBetweenSteps);
   //this.$node = $('.dancer');
-  this.step();
-  console.log('blinky dancers top & left', top, left)
-  this.setPosition(top, left);
+  //this.step();
+  //console.log('blinky dancers top & left', top, left)
+  //this.setPosition(top, left);
   //console.log('value of this within BlinkyDancer subClass', this);
 };
 

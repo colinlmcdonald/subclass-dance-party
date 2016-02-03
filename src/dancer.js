@@ -7,8 +7,8 @@ var Dancer = function(top, left, timeBetweenSteps){
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
   this.timeBetweenSteps = timeBetweenSteps;
-  this.setPosition(this.top, this.left);
   this.step();
+  this.setPosition(top, left);
 
 //console.log('value of this within Dancer Class', this);
 //console.log('value of this.step within Dancer Class', this.step)
