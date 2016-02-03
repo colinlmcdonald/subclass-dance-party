@@ -22,7 +22,6 @@ var SliderDancer = function(top, left, timeBetweenSteps){
   };
 
   this.$node.css('border-color', randomHexGenerator );
-  this.$node.toggle();
 
 
   };
