@@ -16,12 +16,23 @@ var SliderDancer = function(top, left, timeBetweenSteps){
 
   this.$node.css('top', randomNumber + 'px');
   this.$node.css('bottom', randomNumber +'px');
-
+  this.$node.css('left', randomNumber +'px');
+  this.$node.css('right', randomNumber +'px');
   var randomHexGenerator = function() {
     return '#' + Math.floor(Math.random()*16777215).toString(16);
   };
 
   this.$node.css('border-color', randomHexGenerator );
-
+  setInterval(function(){this.$node.css('transform', 'rotate(45deg)')}, ((1/4)*1000));
 
   };
+
+var listener = function(){
+  $(".lineUps").on('click', function(){
+
+    var $dancers = $('.dancer');
+    $dancers.css('position', 'relative')
+    $dancers.css('left', '750px')
+
+  } )
+}
